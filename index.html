@@ -1,88 +1,180 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="//d3js.org/topojson.v1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <title>project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/lib/javascript-static.js"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/lib/javascript-mod.php"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/lib/overlib/overlib.js"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/lib/overlib/overlib_cssstyle.js"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/lib/cookies.js"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/lib/ufo.js"></script>
+    <script type="text/javascript" src="https://e-tutor.itsa.org.tw/e-Tutor/lib/dropdown.js"></script>
+
 
     <style>
-        body {
-            background-color: #fff;
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#398fd6+5,7db9e8+76 */
-            background: #398fd6;
-            /* Old browsers */
-            background: -moz-linear-gradient(-45deg, #398fd6 5%, #7db9e8 76%);
-            /* FF3.6-15 */
-            background: -webkit-linear-gradient(-45deg, #398fd6 5%, #7db9e8 76%);
-            /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(135deg, #398fd6 5%, #7db9e8 76%);
-            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#398fd6', endColorstr='#7db9e8', GradientType=1);
-            /* IE6-9 fallback on horizontal gradient */
+        * {
+            font-family: Microsoft JhengHei;
         }
 
-        .subunit-boundary {
-            fill: none;
-            stroke: #FFD306;
-            stroke-dasharray: 5, 0;
-            stroke-linejoin: round;
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: dimgray;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .y {
+            color: black;
+            margin-bottom: 0;
+            padding: 10px;
+        }
+
+            .y:hover {
+                background-color: lightgray;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            width: 100%;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+            bottom: 0px;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
         }
     </style>
 </head>
-
-
 <body>
-    <script>
-        jQuery(function () {
-            var width = 800,
-                height = 600;
-            var svg = d3.select("body").append("svg")
-                // .attr("class", "svgback")
-                .attr("width", width)
-                .attr("height", height);
-            var projection = d3.geo.mercator()
-                .center([121, 24])
-                .scale(6000);
-            var path = d3.geo.path()
-                .projection(projection);
-            d3.json("taiwan.json", function (error, topology) {
-                console.log(topology);
-                var g = svg.append("g");
-                // ����/��F�Ϭɽu
-                d3.select("svg").append("path").datum(
-                    topojson.mesh(topology,
-                        topology.objects["County_MOI_1060525"],
-                        function (a,
-                            b) {
-                            return a !== b;
-                        })).attr("d", path).attr("class", "subunit-boundary");
-                d3.select("g").selectAll("path")
-                    .data(topojson.feature(topology, topology.objects.County_MOI_1060525).features)
-                    .enter()
-                    .append("path")
-                    .attr("d", path)
-                    .attr({
-                        d: path,
-                        name: function (d) {
-                            return d.properties["COUNTYNAME"];
-                        },
-                        fill: '#fff',
-                        stroke: "#FFD306"
-                    }).attr('stroke-width', "2")
-                    .on("mouseover", function (d) {
-                        d3.select(this).attr("fill", "#FFDC35");
-                    }).on("mouseleave", function (d) {
-                        d3.select(this).attr("fill", "#fff");
-                    });
-            });
-        })
 
-    </script>
+    <div class="container-fluid" style="background-color:lightgray">
+        <h1>臺灣旅遊地圖</h1>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <nav>
+                <div class="col-sm-2" style="padding:0;">
+                    <ul class="nav sidenav-nav">
+                        <li><a href="#" style="padding:0;"><p class="y">Link</p></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;"><p class="y">北部</p></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="north.html" style="padding:0;"><p class="y">景點推薦</p></a></li>
+                                <li><a href="#" style="padding:0;"><p class="y">推薦行程</p></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;"><p class="y">中部</p></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="center.html" style="padding:0;"><p class="y">景點推薦</p></a></li>
+                                <li><a href="#" style="padding:0;"><p class="y">推薦行程</p></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;"><p class="y">南部</p></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="south.html" style="padding:0;"><p class="y">景點推薦</p></a></li>
+                                <li><a href="#" style="padding:0;"><p class="y">推薦行程</p></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;"><p class="y">東部</p></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="east.html" style="padding:0;"><p class="y">景點推薦</p></a></li>
+                                <li><a href="#" style="padding:0;"><p class="y">推薦行程</p></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+             <div class="col-sm-6 text-left">
+                <h1>北部</h1>
+                <p></p>
+
+
+                <h4>Test</h4>
+                <p>Lorem ipsum...</p>
+              </div>
+              <div class="col-sm-4">
+               
+              </div>
+        </div>
+    </div>
+
+
+
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
 </body>
-
-
-
 </html>
+
+
