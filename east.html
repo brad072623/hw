@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>east</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: dimgray;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .y {
+            color: black;
+            margin-bottom: 0;
+            padding: 10px;
+        }
+
+            .y:hover {
+                background-color: lightgray;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            width: 100%;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+            bottom: 0px;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        img {
+            border-radius: 8px;
+        }
+
+        .place {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+            .place:hover {
+                width: 110%;
+                height: 80%;
+                border-radius: 8px;
+            }
+
+        span {
+            height: 400px;
+        }
+
+        .tooltip-inner {
+            max-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" style="background-color:lightgray">
+        <h1>臺灣旅遊地圖</h1>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row content">
+            <nav>
+                <div class="col-sm-2" style="padding:0; height: 100%;">
+                    <!--左邊導覽列高度調整注意-->
+                    <ul class="nav sidenav-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">北部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="north.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">中部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="center.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">南部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="south.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">東部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="east.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="col-sm-10" style="padding: 0px;">
+                <div class="col-sm-12">
+                    <div id="pe1" class="col-sm-3" style="height:210px;">
+
+                        <img class="place" src="e1.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="位在台東市的海濱公園，公園內的國際地標擁有獨特的藤編屋頂，融合了台東的地景與公共藝術。園區設有人文主題步道、劇場、廣場、湧泉地景及公共藝術，漫步於此還能遠眺太平洋。這裡也會不定期舉辦各式藝文表演活動，使得整體空間形成一處感受海洋氣息與悠閒時光的好去處。" />
+                        <button id="e1" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        台東海濱公園
+
+                    </div>
+                    <div id="pe2" class="col-sm-3" style="height:210px;">
+
+                        <img class="place" src="e2.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="九份位於新北市瑞芳區，是昔日台灣的採金礦中心，環山面海，擁有變化多端的山海美景，為一座小小的山城，保有著純樸的舊日生活風貌，根據《台北縣誌》上的文獻資料顯示，在清朝初年的時候這裡的村落只住了9戶人家，因此每當外出到市集購物或是貨船來到時每樣東西都是要九份，後來九份便自然而然地成為這裡的地名；清朝光緒19年(西元1893年)在九份地區發現砂金，淘金與採金的人潮便逐漸湧入此地，但在金礦產業漸漸沒落之後，九份的輝煌時期便走向歷史；時至今日，由於觀光產業的興起，九份又恢復到以往的繁榮，在老街上處處是人聲鼎沸，忙碌的都市人在這裡找到一處可以放鬆心靈的地方。" />
+                        <button id="e2" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        太麻里車站
+                    </div>
+
+                    <div id="pe3" class="col-sm-3" style="height:210px;">
+
+                        <img class="place" src="e3.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="蘭陽博物館座落宜蘭縣頭城鎮烏石港區，於1989年由宜蘭地方人士提出興建構想，並在1992年12月受宜蘭縣政府成立籌建規劃委員會，且正式命名「蘭陽博物館」，期間透過相關研究單位針對蘭陽博物館進行整體規劃。為此，蘭陽博物館在歷經十五年的規劃、蒐集文物、設計、徵收土地、製作預算書圖等長久的過程，終於在2004年7月舉行動工典禮，並於同年8月2日正式開工著手進行建築工程，建築工程動工期間，再經過二次新建工程(建築接續工程)、新建工程(機電工程)的公開招標，最終於2008年4月2日完成主體建築上樑。" />
+
+                        <button id="e3" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        蘭陽博物館
+                    </div>
+                    <div id="pe4" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="e4.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="野柳地質公園原名野柳風景區，位於新北市萬里區沿海地區，因受風化的作用，是北海岸相當著名地質及奇石的風景名勝地，屬於北海岸及觀音山國家風景區，風景區內的地形大致上為一個凸出於海面的岬角，長約1700公尺，如同一隻大海龜因此又名『野柳龜』，再歷經長時間的海蝕風化和地殼運動，形成了海蝕洞溝、蜂窩石、燭狀石、豆腐石、蕈狀岩、壺穴、溶蝕盤等等特殊的地質景觀，為北海岸旅遊又增添了許多迷人的色彩。" />
+                        <button id="e4" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        羅東林業文化園區
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div id="pe5" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="e5.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="象鼻岩為網路廣為流傳的台灣36個秘境之一，顧名思義為外觀酷似一頭巨象側身矗立於海上之巨岩，懸崖岬角為象身，海蝕拱門細長彎曲的石塊則宛如巨象的長鼻伸向深不見底的大海，象頭與象鼻之間的空隙形成海蝕洞的拱門景觀。" />
+                        <button id="e5" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        金崙海灘
+                    </div>
+                    <div id="pe6" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="e6.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="肇建於1935年的中興紙廠，從日治時代的「臺灣興業株式會社」歷經國民政府接管後再轉為國營事業，當時不僅是台灣規模最大的造紙工廠，生產量甚至是東南亞第一；2001年紙廠停工結束經營，園區自此歇息了十三年，2014年由宜蘭縣政府接手，透過工業遺構的保存與活化，啟動了文創應用、育成扎根等再造策略，開啟中興老廠房重生運用的新契機。" />
+                        <button id="e6" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        宜蘭中興文創園區
+                    </div>
+                    <div id="pe7" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="e7.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="多良火車站原為臺鐵招呼站，因業務清淡自2006年7月1日起結束旅客業務，同年10月1日正式裁撤。因站址原為山坡地，南迴鐵路工程處特別將車站以高架設計，一樓為候車室與售票處，二樓為月台，月台上的紅色欄杆為明顯特色，站在此處可鳥瞰太平洋，被譽為全臺灣最美的車站，吸引許多鐵道迷前來朝聖。來到這最美麗的車站參觀時請注意，因月台與軌道間無任何安全措施，請勿隨意跨越鐵軌以免發生意外。" />
+                        <button id="e7" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        多良車站
+                    </div>
+                    <div id="pe8" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="e8.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="玉富自行車道是花蓮縣玉里環鎮自行車步道的支線，由玉里火車站經安通鐵馬站到舊東里車站，總長度大約10公里。利用台鐵舊鐵道改建而成的自行車道沿途可見幾座已棄置不用的舊車站，其中最特別的是長達數百公尺的鐵路橋，橋下是河道寬廣的秀姑巒溪，獨一無二的景觀特色非常值得一遊。" />
+                        <button id="e8" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        玉富自行車道
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div id="pe9" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="e9.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                             width="100%" height="70%"
+                             title="台東鐵道藝術村以鐵道文化展現、藝文活動表演及旅遊資訊服務為主，舊站區內原有的倉庫也以不同的功能做定位及發展，包括與鐵道相關的展示空間「黑倉庫」是鐵道迷專屬的交流場所；古樸的「機關庫」建於1919年，屬日式建築，是東部僅存的半木造結構車庫，現在也是表演者的最佳舞台；253號倉庫、261號倉庫、275號倉庫原為貨運倉庫，現今作為藝術家工作室與創新交流的展示場所，遊客隨時可近距離的與創作者交談互動，讓藝術更貼近生活。 " />
+                        <button id="e9" type="button" class="btn btn-danger">
+                            <img src="heart.jpg" width="25px" ;
+                                 height="25px">
+                        </button>
+                        台東鐵道藝術村
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <p>資料來源</p>
+        <p>https://www.travelking.com.tw/tourguide/taiwan/</p>
+        <p>https://www.taiwan.net.tw/m1.aspx?sNo=0001106&id=A12-00280</p>
+    </footer>
+    <script>
+
+        $(document).ready(function () {
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var x = ($(this).attr("id"));
+                var z = "p" + x;
+                if ($("#" + z).css("background-color") != "rgb(249, 131, 106)") {
+                    $("#" + z).css("background-color", "#F9836A");
+                    window.localStorage.setItem("#" + z, "#F9836A");
+                }
+                else {
+                    $("#" + z).css("background-color", "#FFFFFF");
+                    window.localStorage.removeItem("#" + z);
+                }
+            });
+
+        });
+
+    </script>
+
+    <script>
+        var tag = []
+        $(document).ready(function () {
+            for (var i = 0; i < localStorage.length; ++i) {
+                tag[i] = localStorage.key(i);
+                var v = window.localStorage.getItem(tag[i]);
+                $(tag[i]).css("background-color", v);
+            }
+        });
+    </script>
+</body>
+
+</html>

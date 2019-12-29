@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>south</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: dimgray;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .y {
+            color: black;
+            margin-bottom: 0;
+            padding: 10px;
+        }
+
+            .y:hover {
+                background-color: lightgray;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            width: 100%;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+            bottom: 0px;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        img {
+            border-radius: 8px;
+        }
+
+        .place {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+            .place:hover {
+                width: 110%;
+                height: 80%;
+                border-radius: 8px;
+            }
+
+        span {
+            height: 400px;
+        }
+
+        .tooltip-inner {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid" style="background-color:lightgray">
+        <h1>臺灣旅遊地圖</h1>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <nav>
+                <div class="col-sm-2" style="padding:0; height: 100%;">
+                    <!--左邊導覽列高度調整注意-->
+                    <ul class="nav sidenav-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">北部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="north.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">中部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="center.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">南部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="south.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">東部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="east.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="col-sm-10" style="padding: 0px;">
+                <div class="col-sm-12">
+
+                    <div id="pc1" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="c1.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="台中國家歌劇院位於台中市西屯區，是極具特色的大型公有展演空間，由日本建築師伊東豊雄設計，以人類最原始的「洞窟」、「地穴」的概念設計成世界獨一無二的美聲涵洞曲牆建築，歷時五年時間完成、耗資43.6億元，終在2014年11月23日落成啟用，內部規劃有大劇院、中劇院及小型實驗劇場，共可容納約三千餘人。" />
+                        <button id="c1" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        國家歌劇院
+                    </div>
+
+
+                    <div id="pc2" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="c2.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="海線鐵路苗栗路段有三座日治時代保留至今的木造火車站，新埔車站就是其中一座，車站與鐵道設施瀰漫著陳舊斑駁氣息，營造了復古懷舊、節奏緩慢的特殊旅遊風格。新埔車站也是臺鐵西部鐵路幹線中，最接近海的車站，從1922 年啟用至今已近百歲高齡，木造車站的結構風格、年代價值相當高，目前這個車站依然正常使用中。來到這裡只要放慢腳步，仔細在各處角落尋覓舊時歲月的痕跡，欣賞午後陽光與斑駁的木造結構映襯之美，就能沈浸在光影美感之中。" />
+                        <button id="c2" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        新埔車站
+                    </div>
+
+
+
+
+                    <div id="pc3" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="c3.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="大坑溫泉位於台中市大坑風景區內，和台灣多數溫泉不同的是，大坑溫泉不是自然湧出泉，而是經由地底鑽探的鑽探泉。泉質是碳酸氫納泉，PH在7至8間，又稱重曹泉或是美人湯，據說對皮膚的潤滑效果很顯著。大坑溫泉沒有刺鼻的硫磺味，泉溫較低，通常維持在攝氏50度以下，浸泡時在皮膚表面呈現氣泡，具有天然的輕微按摩作用。" />
+                        <button id="c3" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        大坑溫泉
+                    </div>
+
+
+
+                    <div id="pc4" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="c4.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="麗寶樂園位於台中市后里區安眉路月眉糖廠後方、接近泰安休息站，面積廣大約為200公頃，麗寶樂園是麗寶樂園國際開發股份有限公司與台糖公司合作的大型遊樂區；麗寶樂園園區分為三部分，東側為複合休閒區、中央為綜合育樂區、西側屬家庭娛樂區，包含有主題樂園、水上樂園、歡樂街、好萊塢劇場、主題旅館、渡假村、企業家具樂部、文化藝術區、馬術中心等設施。" />
+                        <button id="c4" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        麗寶樂園
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-12">
+
+                    <div id="pc5" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="c5.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="武陵農場位於台中市和平區平等村、七家灣溪畔的谷地中，武陵農場是國寶魚櫻花鉤吻鮭的家鄉，以盛產梨、蘋果、水蜜桃及夏季蔬菜、高山茶等高山農場品聞名，武陵農場一年四季景象迴異，處處瀰漫著果香、菜香、清新的空氣，讓您在武陵農場恍若身在世外桃源。" />
+                        <button id="c5" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        武陵農場
+
+                    </div>
+
+
+                    <div id="pc6" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="c6.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="在雲林，西螺、崙背與虎尾等地，都是布袋戲的家鄉，而布袋戲在雲林隨後又形成兩種不同的派別，其一是由黃海岱、黃俊雄風格所主導的「文戲」泰斗；另外一派則是由西螺的鍾任祥、鍾任璧所領導的「閣派」，這鍾派則是「武戲」的權威。不過這兩派同仁和平相處，互相切磋，教學相長，彼此感情有如兄弟般融洽。對布袋戲偶有興趣的人士，可以到雲林去走訪一趟。" />
+                        <button id="c6" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        
+
+                                雲林布袋戲館
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <footer class="container-fluid text-center">
+        <p>資料來源</p>
+        <p>https://www.travelking.com.tw/tourguide/taiwan/</p>
+        <p>https://miaolitravel.net/article.aspx?sNo=04007239</p>
+    </footer>
+
+    <script>
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+    </script>
+
+    <script>
+                $(document).ready(function () {
+                    $("button").click(function () {
+                        var x = ($(this).attr("id"));
+                        var z = "p" + x;
+                        if ($("#" + z).css("background-color") != "rgb(249, 131, 106)") {
+                            $("#" + z).css("background-color", "#F9836A");
+                            window.localStorage.setItem("#" + z, "#F9836A");
+                        }
+                        else {
+                            $("#" + z).css("background-color", "#FFFFFF");
+                            window.localStorage.removeItem("#" + z);
+                        }
+                    });
+                });
+    </script>
+
+    <script>
+                var tag = []
+                $(document).ready(function () {
+                    for (var i = 0; i < localStorage.length; ++i) {
+                        tag[i] = localStorage.key(i);
+                        var v = window.localStorage.getItem(tag[i]);
+                        $(tag[i]).css("background-color", v);
+                    }
+                });
+    </script>
+
+
+
+</body>
+</html>

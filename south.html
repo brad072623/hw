@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>south</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: dimgray;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .y {
+            color: black;
+            margin-bottom: 0;
+            padding: 10px;
+        }
+
+            .y:hover {
+                background-color: lightgray;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            width: 100%;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+            bottom: 0px;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        img {
+            border-radius: 8px;
+        }
+
+        .place {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           
+        }
+
+            .place:hover {
+                width: 110%;
+                height: 80%;
+                border-radius: 8px;
+            }
+
+        span {
+            height: 400px;
+        }
+
+        .tooltip-inner {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid" style="background-color:lightgray">
+        <h1>臺灣旅遊地圖</h1>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <nav>
+                <div class="col-sm-2" style="padding:0; height: 100%;">
+                    <!--左邊導覽列高度調整注意-->
+                    <ul class="nav sidenav-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">北部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="north.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">中部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="center.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">南部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="south.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">東部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="east.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="col-sm-10" style="padding: 0px;">
+                <div class="col-sm-12">
+
+                    <div id="ps1" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="s1.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="旗津風景區位於高雄市旗津區旗津半島、高雄港西側，因為位在旗山的後面因此稱為旗後(旗后)，是昔日船隻往來津渡的地方因此才改稱為旗津；旗津的地形為一個海外沙洲，南北長約11.3公里、平均寬度200公尺，是高雄市最早的海港，旗津原本與台灣本島相連，1967年高雄港為了開闢第二港口便將外海中的半島地形截斷，讓旗津成為一個獨立小島，至1984年過港隧道落成，使高雄和旗津兩地交通改善，讓旗津成為旅遊資源更為豐富的地方，以海鮮、渡輪和歷史人文古蹟史蹟吸引民眾的旅遊勝地，更規劃旗津風景區讓民眾有更完善的旅遊景點。" />
+                        <button id="s1" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        旗津
+                    </div>
+
+
+                    <div id="ps2" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="s2.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="高屏舊鐵橋位於高雄市大樹區九曲堂站和屏東市六塊厝站之間，是座花樑結構鐵橋，原名為下淡水溪鐵橋，興建於1911年初，在1913年底完工，為單軌鐵道，全長1526公尺、寬7.6公尺，由24節鋼桁架所組成，為當時亞洲最長的鐵橋。1987年台鐵重建高屏溪橋後功成身退，並於1997年經內政部指定為台閩地區第二級古蹟，是目前臺灣唯一列為第二級古蹟的鐵道用橋樑。" />
+                        <button id="s2" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        高屏舊鐵橋
+                    </div>
+
+
+
+
+                    <div id="ps3" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="s3.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="國立海洋生物博物館位於屏東縣車城鄉，即為墾丁國家公園西北角龜山山麓的臨海地區，台灣是一個被水擁抱的國家，擁有豐富、獨特的水域資源，也孕育了多樣的人文資源，為了達成國家的自然教育、經濟、文化與休閒的目標外，更希望對自然、環保的尊重，都能盡上最大的一份心力。" />
+                        <button id="s3" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        海洋生物博物館
+                    </div>
+
+
+
+                    <div id="ps4" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="s4.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="國立故宮南院位於嘉義縣太保市，並定位為「亞洲藝術文化博物館」，期盼與台北故宮博物院達到「平衡南北，文化均富」的理念，並帶動中南部地區的文化風氣與經濟發展。故宮南院的園區幅員廣闊，除了有人工濕地、熱帶花園、水岸舞台等休閒區域，並設有至善湖、至德湖兩座人工湖。博物館內策展以故宮本身的豐富典藏為主，並輔以國際借展，策劃各類精彩的展覽。" />
+                        <button id="s4" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        故宮南院
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-12">
+
+                    <div id="ps5" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="s5.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="由石昭永建築師及日本坂茂建築設計事務所共同打造，是由普立茲克建築獎得主所規劃設計的建築物。建築本體以鳳凰花為發想概念，五角形的外型將使南美館成為一座象徵臺南的文化地標，垂直錯落堆疊的展示空間，結合大型碎形屋頂，構成南美館2館的主要外型。" />
+                        <button id="s5" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        台南美術館二館
+
+                    </div>
+
+
+                    <div id="ps6" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="s6.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="位在鳳山的衛武營國家藝術文化中心，耗時七年，打造出全球最大單一屋頂的綜合劇院，不僅是台灣規模最大的文化硬體建設，也是南台灣第一座國家級表演藝術場館。" />
+                        <button id="s6" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        衛武營國家藝術中心
+                    </div>
+
+                </div>
+
+
+                </div>
+
+
+               
+
+
+
+              
+
+
+
+
+
+            </div>
+
+
+
+
+            </div>
+
+
+            <footer class="container-fluid text-center">
+                <p>資料來源</p>
+                <p>https://www.travelking.com.tw/tourguide/taiwan/</p>
+                <p>https://www.twtainan.net/zh-tw/attractions/detail/5533</p>
+            </footer>
+
+            <script>
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
+
+            <script>
+                $(document).ready(function () {
+                    $("button").click(function () {
+                        var x = ($(this).attr("id"));
+                        var z = "p" + x;
+                        if ($("#" + z).css("background-color") != "rgb(249, 131, 106)") {
+                            $("#" + z).css("background-color", "#F9836A");
+                            window.localStorage.setItem("#" + z, "#F9836A");
+                        }
+                        else {
+                            $("#" + z).css("background-color", "#FFFFFF");
+                            window.localStorage.removeItem("#" + z);
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                var tag = []
+                $(document).ready(function () {
+                    for (var i = 0; i < localStorage.length; ++i) {
+                        tag[i] = localStorage.key(i);
+                        var v = window.localStorage.getItem(tag[i]);
+                        $(tag[i]).css("background-color", v);
+                    }
+                });
+            </script>
+
+
+
+</body>
+</html>

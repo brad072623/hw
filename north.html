@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>north</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: dimgray;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .y {
+            color: black;
+            margin-bottom: 0;
+            padding: 10px;
+            
+        }
+
+        .y:hover
+        {
+           background-color: lightgray;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        .dropdown{
+            position:relative;
+            
+        }
+        .dropdown-menu {
+            margin: 0;
+            border: none;
+            border-radius: 0;   
+            padding: 0;
+            width: 100%;
+            box-shadow: none;
+            position: relative;          
+            text-align: center;
+            margin-bottom:10px;
+            bottom:0px;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+          
+        }
+        img {
+            border-radius: 8px;
+        }
+        .place {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+            .place:hover {
+                width: 110%;
+                height: 80%;
+                border-radius: 8px;
+            }
+       span
+       {
+           height:400px;
+       }
+       .tooltip-inner{
+           
+           max-width:200px;
+       }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid" style="background-color:lightgray">
+        <h1>臺灣旅遊地圖</h1>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <nav>
+                <div class="col-sm-2" style="padding:0; height: 100%;">
+                    <!--左邊導覽列高度調整注意-->
+                    <ul class="nav sidenav-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">北部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="north.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">中部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="center.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">南部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="south.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">東部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="east.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" style="padding:0;">
+                                        <p class="y">推薦行程</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="col-sm-10" style="padding: 0px;">
+                <div class="col-sm-12">
+                    <div id="pn1" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n1.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="望幽谷又稱它作忘憂谷，位在八斗子和長潭里之間間一個Ｖ型山谷，是一片翠綠谷地，長年皆綠草如茵、起伏有致，近看八斗子漁港、遠望海中的基隆嶼，令人看了忘卻許多的憂愁，故稱為忘憂。四周海灘寬約20公尺，海灘遍佈海蝕平臺、豆腐岩等地質景觀，中央有一平台式的坡地可容納三、四十人紮營。適合拾貝、捉蟹、游泳、戲潮.....等等，同時也是觀察海洋生物的天然教室。山上因缺乏可遮蔽的樹蔭，白天很少有人久留，但是到了夜晚、山坡成了欣賞漁火的好地點。" />
+                        <button id="n1" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        望幽谷
+                    </div>
+
+                    <div id="pn2" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n2.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="九份位於新北市瑞芳區，是昔日台灣的採金礦中心，環山面海，擁有變化多端的山海美景，為一座小小的山城，保有著純樸的舊日生活風貌，根據《台北縣誌》上的文獻資料顯示，在清朝初年的時候這裡的村落只住了9戶人家，因此每當外出到市集購物或是貨船來到時每樣東西都是要九份，後來九份便自然而然地成為這裡的地名；清朝光緒19年(西元1893年)在九份地區發現砂金，淘金與採金的人潮便逐漸湧入此地，但在金礦產業漸漸沒落之後，九份的輝煌時期便走向歷史；時至今日，由於觀光產業的興起，九份又恢復到以往的繁榮，在老街上處處是人聲鼎沸，忙碌的都市人在這裡找到一處可以放鬆心靈的地方。" />
+                        <button id="n2" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        九份山城
+                    </div>
+
+                    <div id="pn3" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n3.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="和平島屬於基隆市中正區，位於基隆港北端、港口東側，距基隆市約4公里，佔地66公頃餘，目前已和台灣本島形成「陸連島」。由於終年受到東北季風吹襲以及海浪拍打侵蝕影響，造成和平島的天然景觀奇特，加上和平島海岸屬於沉降海岸，因此造就了許多奇岸怪石的景觀，因景觀獨特政府規劃開闢為和平島濱海公園。後經封閉三年並重新整修，已於2012年6月更名「和平島公園」重新開放，初期規劃海泳池、奇岩區、旅客服務中心等三個主要區塊，後期也將開放露營區、烤肉區，提供前往遊覽之民眾更多選擇。" />
+                        <button id="n3" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        和平島公園
+                    </div>
+
+
+                    <div id="pn4" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n4.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="野柳地質公園原名野柳風景區，位於新北市萬里區沿海地區，因受風化的作用，是北海岸相當著名地質及奇石的風景名勝地，屬於北海岸及觀音山國家風景區，風景區內的地形大致上為一個凸出於海面的岬角，長約1700公尺，如同一隻大海龜因此又名『野柳龜』，再歷經長時間的海蝕風化和地殼運動，形成了海蝕洞溝、蜂窩石、燭狀石、豆腐石、蕈狀岩、壺穴、溶蝕盤等等特殊的地質景觀，為北海岸旅遊又增添了許多迷人的色彩。" />
+                        <button id="n4" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        野柳風景區
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-12">
+
+                    <div id="pn5" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n5.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="象鼻岩為網路廣為流傳的台灣36個秘境之一，顧名思義為外觀酷似一頭巨象側身矗立於海上之巨岩，懸崖岬角為象身，海蝕拱門細長彎曲的石塊則宛如巨象的長鼻伸向深不見底的大海，象頭與象鼻之間的空隙形成海蝕洞的拱門景觀。" />
+                        <button id="n5" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        象鼻岩
+
+                    </div>
+
+                    <div id="pn6" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n6.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="味衛佳柿餅觀光農場位於新竹縣新埔鎮，一字排開的曬柿場讓它成為該地相當知名的柿餅製作工廠，吸引了許多攝影愛好者到此拍攝。來到農場內不僅可以一覽曬柿的傳統景緻，看著老師傅們熟練的處理柿子，也可參與果園內的導覽解說、捏柿餅DIY體驗等活動，一嚐各種柿餅產品的滋味。" />
+                        <button id="n6" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        新埔曬柿餅
+                    </div>
+
+                    <div id="pn7" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n7.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="基隆廟口位於基隆市仁愛區的精華地帶，而且鄰近基隆火車站，交通十分方便；基隆廟口經過數十年的演變，不僅每個攤位都有按順序編號，且有統一的招牌，有統一的規劃管理，使基隆廟口成為基隆的代名詞，使得基隆市更具觀光價值。" />
+                        <button id="n7" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        廟口夜市
+                    </div>
+
+                    <div id="pn8" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n8.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="「潮境」指的是寒、暖兩潮流的混合區，特別指西太平洋的黑潮與親潮的海水混合處，此區浮游生物孳生，能吸引洄游魚類聚集、成為魚場，也就是魚群較易匯集的地方，夏季時附近海域白帶魚、軟絲「大咬」，總是吸引不少釣客。潮境公園園區原本為一處垃圾集放地，後來經海洋科技博物館籌備處規劃改建後，成為一處看海賞景的最佳去處，而以「潮境」為名的這個公園，因為位於漁港及漁村旁，便希望以這個名稱為地方帶來源源不絕的蘊藏與豐收。" />
+                        <button id="n8" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        潮境公園
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12">
+
+                    <div id="pn9" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n9.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="八斗子車站是臺灣鐵路管理局所屬深澳線上一座位在臺灣新北市瑞芳區深澳里與基隆市中正區砂子里交界的鐵路車站。有「北台灣多良車站」的美譽" />
+                        <button id="n9" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        八斗子車站
+                    </div>
+
+
+                    <div id="pn10" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n10.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="水湳洞乃因其後山有一山洞似西遊記的水濂洞而得名，其海岸景觀因受到不同的侵蝕方式，而呈現兩種現象 ： 一種是被海水侵蝕的黑褐色岩塊，狀似蜂窩， 一種是受到擠壓後被海水侵蝕的紅褐色岩塊，狀似糰塊的特殊岩層。" />
+                        <button id="n10" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        水湳洞
+                    </div>
+
+
+                    <div id="pn11" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n11.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="白米甕砲台為一字排開的配置，由左而右為指揮所、四個砲座、觀測台一字並列面對海上，乃台灣現存砲台中唯一的形制，究其原因乃因地形上依恃在兩座小山丘間，可阻擋來自側邊的攻擊，而兩旁的高地則提供了絕佳的視野，成為指揮所與觀測台的最佳選擇；還有，由於白米甕砲台的主要任務是直接以火力摧毀敵船於港外，因此一字排開的方式便可發揮最大的攻擊砲火，進而達成『制海砲台】的目的。" />
+                        <button id="n11" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        白米甕炮台
+                    </div>
+
+
+                    <div id="pn12" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n12.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="享有「桃園將軍村」美名的馬祖新村，並非因當地居民來自馬祖而得名，而是當年蔣總統夫人宋美齡帶領勞軍團前往馬祖慰問時，為了穩定軍心，提出安置這些駐守在前線官兵在台眷屬的需求，而建造了現在的馬祖新村。第一批眷舍就在民國四十六年完成，並分配給陸軍84師少將級以下軍官與眷屬居住，而成為龍岡當地第一個眷村。居民也從原本預計的七十六戶擴大成後來約有兩百二十六戶，採棋盤式道路並搭配魚骨式村舍配置，營造出獨門獨戶的居住空間，周邊則陸續增設了活動中心、禮堂、社區公園、草坪、球場、涼亭等公共設施，形成自給自足的半封閉式眷村聚落，並在民國八十七年獲得全國模範社區，帶給全村相當大的鼓勵。" />
+                        <button id="n12" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        馬祖新村眷村文創園區
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-sm-12">
+
+                    <div id="pn13" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n13.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="位在台北市信義區的松山文創園區，前身為「台灣省菸酒公賣局松山菸廠」，專門製造捲菸、雪茄等菸草製品。松山菸廠在1998年停止生產、併入台北菸廠後正式走入歷史，並於2001年被列為市定古蹟，幾經整修後才轉型為目前的松山文化創意園區，園區內以文創展演為主，可說是台北市占地最大、最活躍的文化園區。" />
+                        <button id="n13" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        松菸文創園區
+                    </div>
+
+
+                    <div id="pn14" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n14.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="十三行博物館位於新北市八里區淡水河海口交界處的南岸，面積約為62500平方公尺，為民國46年地質學者林朝綮在這裡發現史前的煉鐵遺跡，同時亦發現許多史前陶片、石支腳與凹石等，因而判斷此處為史前遺址，並依據該地地名將它定名為十三行遺址，至於命名為『十三行遺址』是根據考古學習慣，史前遺址的命名多採用發現地的最小地名，而十三行遺址之所在地，新北市八里區頂罟村的別名為『十三行莊』因而得名。" />
+                        <button id="n14" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        十三行博物館
+                    </div>
+
+                    <div id="pn15" class="col-sm-3" style="height:210px;">
+                        <img class="place" src="n15.jpg" data-toggle="tooltip" data-placement="bottom" data-html="true" width="100%" height="70%" title="漁人碼頭原只是一個傳統的小漁港，如今不但擁有一座美輪美奐的浮動碼頭，最著名景點，就是330多公尺的木棧道、港區公園、情人橋所構成環狀動線，讓遊客可以完整流暢的體驗漁港風情，站在步道遠眺對面觀音山和出海口盡頭的台灣海峽，看著夕陽從水平面上緩緩落下，美景之盛，令人流連忘返。" />
+                        <button id="n15" type="button" class="btn btn-danger"><img src="heart.jpg" width="25px" ; height="25px"></button>
+                        淡水漁人碼頭
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+            <footer class="container-fluid text-center">
+                <p>資料來源</p>
+                <p>https://www.travelking.com.tw/tourguide/taiwan/</p>
+                <p>https://hiking.biji.co/index.php?q=trail&act=detail&id=552</p>
+                <p>https://www.taiwan.net.tw/m1.aspx?sNo=0001016</p>
+            </footer>
+
+            <script>
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
+
+            <script>
+                $(document).ready(function () {
+                    $("button").click(function () {
+                        var x = ($(this).attr("id"));
+                        var z = "p" + x;
+                        if ($("#" + z).css("background-color") != "rgb(249, 131, 106)") {
+                            $("#" + z).css("background-color", "#F9836A");
+                            window.localStorage.setItem("#" + z, "#F9836A");
+                        }
+                        else {
+                            $("#" + z).css("background-color", "#FFFFFF");
+                            window.localStorage.removeItem("#" + z);
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                var tag = []
+                $(document).ready(function () {
+                    for (var i = 0; i < localStorage.length; ++i) {
+                        tag[i] = localStorage.key(i);
+                        var v = window.localStorage.getItem(tag[i]);
+                        $(tag[i]).css("background-color", v);
+                    }
+                });
+            </script>
+
+
+
+</body>
+</html>
