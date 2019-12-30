@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Taiwan Travel Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: none;
+            background-color: dimgray;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .y {
+            color: black;
+            margin-bottom: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .y:hover {
+            background-color: lightgray;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            width: 100%;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        /* The container */
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: Microsoft JhengHei;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        /* Hide the browser's default checkbox */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked~.checkmark {
+            background-color: #2196F3;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        #submit {
+            margin-bottom: 12px;
+            padding: 5px;
+            font-size: 20px;
+            border: none;
+        }
+
+        #submit:hover {
+            background-color: #ccc;
+        }
+
+        #panel {
+            line-height: 30px;
+            padding-left: 10px;
+        }
+
+        #panel select,
+        #panel input {
+            font-size: 15px;
+        }
+
+        #panel select {
+            width: 100%;
+        }
+
+        #panel i {
+            font-size: 12px;
+        }
+
+        #panel {
+            height: 600px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid" style="background-color:lightgray">
+        <h1>臺灣旅遊地圖</h1>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <nav>
+                <div class="col-sm-2" style="padding:0; height: 100%; background-color: #ECEAE8;">
+                    <ul class="nav sidenav-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">北部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="north.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a></li>
+                                <li><a href="routeCommendNorth.html" style="padding:0;">
+                                        <p class="y">行程路線規劃</p>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">中部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="center.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a></li>
+                                <li><a href="routeCommendCentral.html" style="padding:0;">
+                                        <p class="y">行程路線規劃</p>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">南部地區</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="south.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a></li>
+                                <li><a href="#" style="padding:0;">
+                                        <p class="y">行程路線規劃</p>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">東部地區</p>
+                            </a>
+                            <ul class="dropdown-menu" style="margin-bottom:0;">
+                                <li><a href="east.html" style="padding:0;">
+                                        <p class="y">景點推薦</p>
+                                    </a></li>
+                                <li><a href="routeCommendEast.html" style="padding:0;">
+                                        <p class="y">行程路線規劃</p>
+                                    </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col-sm-10" style="padding: 0px;">
+                <div class="col-sm-12">
+                    <h3>幫自己規劃旅遊路線吧！</h3>
+                    <p>說明：請選擇至多四個景點來規劃旅遊路線</p>
+                </div>
+                <div class="col-sm-12">
+                    <div class="col-sm-3" style="padding-left: 0px;">
+                        <label class="container"><input type="checkbox" name="waypoints" value="台南美術館二館">台南美術館二館</input><span
+                                class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints" value="台南走馬瀨農場">台南走馬瀨農場</input><span
+                                class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints" value="台南奇美博物館">台南奇美博物館</input><span
+                                class="checkmark"></span></label>
+                    </div>
+                    <div class="col-sm-3" style="padding-left: 0px;">
+                        <label class="container"><input type="checkbox" name="waypoints" value="台南赤崁樓">台南赤崁樓</input><span
+                                class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints" value="台南安平古堡">台南安平古堡</input><span
+                                class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints"
+                                value="高雄旗津">高雄旗津</input><span class="checkmark"></span></label>
+                    </div>
+                    <div class="col-sm-3" style="padding-left: 0px;">
+                        <label class="container"><input type="checkbox" name="waypoints"
+                                value="高雄高屏舊鐵橋">高雄高屏舊鐵橋</input><span class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints"
+                                value="高雄衛武營國家藝術中心">高雄衛武營國家藝術中心</input><span class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints" value="屏東海洋生物博物館">屏東海洋生物博物館</input><span
+                                class="checkmark"></span></label>
+                    </div>
+                    <div class="col-sm-3" style="padding-left: 0px;">
+                        <label class="container"><input type="checkbox" name="waypoints"
+                                value="屏東墾丁水世界樂園">屏東墾丁水世界樂園</input><span class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints"
+                                value="屏東大津瀑布">屏東大津瀑布</input><span class="checkmark"></span></label>
+                        <label class="container"><input type="checkbox" name="waypoints"
+                                value="嘉義故宮南院">嘉義故宮南院</input><span class="checkmark"></span></label>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <input type="submit" id="submit" value="開始規劃！"></input>
+                </div>
+                <div class="col-sm-12">
+                    <div id="map" style="height:600px;" class="col-sm-9">
+                    </div>
+                    <div id="panel" class="col-sm-3">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var begin;
+                var finish;
+                var findSE = [];
+                var distMax = 0;
+                var indexO = 0;
+                var indexP = 0;
+                function initMap() {
+                    var directionsService = new google.maps.DirectionsService();
+                    var directionsRenderer = new google.maps.DirectionsRenderer();
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 8,
+                        center: { lat: 24, lng: 121 }
+                    });
+                    directionsRenderer.setMap(map);
+                    directionsRenderer.setPanel(document.getElementById('panel'));/*導航指示*/
+
+                    document.getElementById('submit').addEventListener('click', function () {
+                        var check = document.getElementsByName('waypoints');
+                        var checkLen = 0;
+                        for (var j = 0; j < check.length; j++) {
+                            if (check[j].checked) {
+                                checkLen++;
+                            }
+                        }
+                        if (checkLen < 2) {
+                            window.alert("請選擇超過一個景點！")
+                        }
+                        else if (checkLen > 4) {
+                            window.alert("請至多選擇四個景點！")
+                        }
+                        else {
+                            findStartEnd(directionsService, directionsRenderer);
+                        }
+                    });
+                }
+
+
+                function findStartEnd(directionsService, directionsRenderer) {
+                    var findSEArray = document.getElementsByName('waypoints');
+                    for (var j = 0; j < findSEArray.length; j++) {
+                        if (findSEArray[j].checked) {
+                            var tmp = findSEArray[j].value;
+                            findSE.push(tmp);
+                        }
+                    }
+                    begin = findSE[0];
+                    finish = findSE[1];
+                    Distance(begin, finish, 0, 1);
+                    for (var o = 0; o < findSE.length; o++) {
+                        for (var p = o + 1; p < findSE.length; p++) {
+                            Distance(findSE[o], findSE[p], o, p)
+                        }
+                    }
+                    setTimeout(function () {
+                        calculateAndDisplayRoute(directionsService, directionsRenderer);
+                    }, 1000);
+                }
+
+                function Distance(start, end, o, p) {
+                    var request = {
+                        origin: start,
+                        destination: end,
+                        travelMode: google.maps.DirectionsTravelMode.DRIVING
+                    };
+                    //宣告
+                    var directionsService = new google.maps.DirectionsService();
+                    directionsService.route(request, function (response, status) {
+                        if (status == google.maps.DirectionsStatus.OK) {
+                            var route = response.routes[0];
+                            callBackDist(route.legs[0].distance.value, o, p);
+                        }
+                    });
+                }
+
+                function callBackDist(num, o, p) {
+                    if (num > distMax) {
+                        begin = findSE[o];
+                        finish = findSE[p];
+                        indexO = o;
+                        indexP = p;
+                        distMax = num;
+                    }
+                }
+
+                function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+                    var waypts = [];
+                    var checkboxArray = document.getElementsByName('waypoints');
+                    for (var i = 0; i < checkboxArray.length; i++) {
+                        if (checkboxArray[i].checked) {
+                            if (checkboxArray[i].value == findSE[indexO] || checkboxArray[i].value == findSE[indexP]) {
+                                continue;
+                            }
+                            else {
+                                waypts.push({
+                                    location: checkboxArray[i].value,
+                                    stopover: true
+                                });
+                            }
+                        }
+                    }
+
+                    directionsService.route({
+                        origin: findSE[indexO],
+                        destination: findSE[indexP],
+                        waypoints: waypts,
+                        optimizeWaypoints: true,
+                        travelMode: 'DRIVING'
+                    }, function (response, status) {
+                        if (status === 'OK') {
+                            directionsRenderer.setDirections(response);
+                            var route = response.routes[0];
+                        } else {
+                            window.alert('Directions request failed due to ' + status);
+                        }
+                    });
+                }
+            </script>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqMgqKAi7X-CpPbhqdoktMELkz-WVYws0&callback=initMap">
+        </script>
+</body>
+
+</html>

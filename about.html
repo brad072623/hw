@@ -1,14 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>project</title>
+    <title>center</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
     <style>
         * {
             font-family: Microsoft JhengHei;
@@ -65,7 +63,7 @@
             position: relative;
             text-align: center;
             margin-bottom: 10px;
-            
+            bottom: 0px;
         }
 
         /* Set black background color, white text and some padding */
@@ -86,21 +84,40 @@
                 height: auto;
             }
         }
-    </style>
 
-    <script type="text/javascript" language="javascript">
-        window.onload = fackbooklike;
-        function fackbooklike() {
-            var fbLike = document.getElementById("fbLike");
-            if (fbLike) {
-                document.getElementById("fbLike").src = "http://www.facebook.com/plugins/like.php?href=" + location.href + "&layout=standard&show_faces=true&width=350&action=like&colorscheme=light&height=25";
-            }
+        img {
+            border-radius: 8px;
         }
-    </script>
 
+        .place {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
 
+            .place:hover {
+                width: 110%;
+                height: 80%;
+                border-radius: 8px;
+            }
+
+        span {
+            height: 400px;
+        }
+
+        .tooltip-inner {
+            max-width: 200px;
+        }
+    </style>
 </head>
 <body>
+
+
+
+
+
+
+
+
+
 
     <div class="container-fluid" style="background-color:lightgray">
         <h1>臺灣旅遊地圖</h1>
@@ -117,7 +134,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
             </div>
         </div>
@@ -126,8 +143,8 @@
     <div class="container-fluid">
         <div class="row content">
             <nav>
-                <div class="col-sm-2" style="padding:0; height: 100%; background-color:#ECEAE8">
-
+                <div class="col-sm-2" style="padding:0; height: 100%;background-color:#ECEAE8">
+                   
                     <ul class="nav sidenav-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
@@ -178,13 +195,11 @@
                                         <p class="y">行程路線規劃</p>
                                     </a>
                                 </li>
-
                             </ul>
-
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0; ">
-                                <p class="y" >東部地區</p>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding:0;">
+                                <p class="y">東部地區</p>
                             </a>
                             <ul class="dropdown-menu" style="margin-bottom:0;">
                                 <li>
@@ -202,37 +217,40 @@
                     </ul>
                 </div>
             </nav>
-            <div class="col-sm-10">
-                <div class="col-sm-5">
-                    <img src="cover.jpg" width="100%" />
 
-                </div>
-                <div class="col-sm-5">
-                    <p style="text-align:left; font-size:20px;font-family:'Arial Unicode MS'">
-                        臺灣位處於亞熱帶地區，新折曲地形造就臺灣高低落差極大的地理環境，因此擁有豐富的氣候型態，故有豐富的自然資源。臺灣亦位居東亞地區交通要道，自古以來有各種不同文化進出，擁有原住民、荷蘭、西班牙、中國、日本等多樣性歷史人文資產。
+            <div class="col-sm-10" style="padding: 0px;text-align:center;">
+               <div class="col-sm-5">
+                   <img src="00757108.jpg " width="30%;" />
+                   
+                  <p>姓名:林鈺洋</p>
+                   <p>系及:資訊工程2B</p>
+                   <p>負責項目:景點推薦、FB按攢分享、主題css</p>
+               </div>
 
-                        臺灣也以高山聳立聞名國際，是個有名的『高山島嶼』。三千公尺以上的高山，比比皆是，而將近四千公尺的玉山，更是東北亞的第一高峰。也因地理資源的豐沛，臺灣擁有許多特殊地形及奇特的地理景觀。
-                        除了高山外，還有優美的海岸風光。北起擁有各類特殊海岸地形的東北角暨宜蘭海岸國家風景區、北海岸及觀音山國家風景區，沿途山青水秀、天藍海深，廣闊的海天視野乃是此段的特色。經過風光明媚的東部海岸國家風景區及花東縱谷國家風景區的綠色走廊，其景色令人讚嘆與驚喜。一路往南，可達陽光四溢、具南國風味的大鵬灣國家風景區，就順著山勢還可一逛原民風情的茂林國家風景區，一探臺灣蝴蝶世界、魯凱石屋及大自然美景。
+               <div class="col-sm-5">
+                   <img src="00757128.jpg" width="30%"/>
+                    
+                   <p>姓名:童楷臻</p>
+                   <p>系及:資訊工程2B</p>
+                   <p>負責項目:行程路線規劃、Googole map、封面內容</p>
 
-                        快跟著我們一起探索台灣的美吧！
-                    </p>
-
-                </div>
-
+               </div>
 
             </div>
+
         </div>
+
+
+
+
     </div>
 
 
-
     <footer class="container-fluid text-center">
-        <p><a href="台灣旅遊地圖-00757108+00757128.pptx" style="color:yellow"> 說明文件 </a></p>
-
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fbrad072623.github.io%2Fhw%2F&width=100&layout=standard&action=like&size=small&share=true&height=35&appId" width="250" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                
     </footer>
+
+
 
 </body>
 </html>
-
-
