@@ -342,6 +342,12 @@
                     document.getElementById('submit').addEventListener('click', function () {
                         var check = document.getElementsByName('waypoints');
                         var checkLen = 0;
+
+                        distMax = 0;
+                        indexO = 0;
+                        indexP = 0;
+                        findSE.length = 0;
+
                         for (var j = 0; j < check.length; j++) {
                             if (check[j].checked) {
                                 checkLen++;
