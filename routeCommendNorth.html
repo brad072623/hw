@@ -387,15 +387,15 @@
                     Distance(begin, finish, 0, 1);
                     for (var o = 0; o < findSE.length; o++) {
                         for (var p = o + 1; p < findSE.length; p++) {
-                            setTimeout(function () {
+                            //setTimeout(function () {
                                 Distance(findSE[o], findSE[p], o, p);
-                            }, 200);
+                            //}, 200);
                             
                         }
                     }
                     setTimeout(function () {
                         calculateAndDisplayRoute(directionsService, directionsRenderer);
-                    }, 3000);
+                    }, 2000);
                 }
 
                 function Distance(start, end, o, p) {
